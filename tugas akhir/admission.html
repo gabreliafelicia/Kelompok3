@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kampus - Admission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="UHM" class="logo">
+        <h1>Pendaftaran</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="departments.html">Programs</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admission.html">Admission</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="admission-section">
+            <h2>Prosedur Pendaftaran</h2>
+            <p>Ikuti langkah-langkah berikut untuk mendaftar di kampus kami:</p>
+            <ol>
+                <li>Mengisi formulir pendaftaran online.</li>
+                <li>Mengunggah dokumen yang diperlukan.</li>
+                <li>Melakukan pembayaran biaya pendaftaran.</li>
+                <li>Menunggu konfirmasi dari pihak kampus.</li>
+            </ol>
+            <h3>Formulir Pendaftaran</h3>
+            <form action="admission-form-handler.php" method="post">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="dob">Tanggal Lahir:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="program">Program Studi yang Dipilih:</label>
+                <select id="program" name="program" required>
+                    <option value="informatika">Informatika</option>
+                    <option value="sistem-informasi">Sistem Informasi</option>
+                    <option value="manajemen">Manajemen</option>
+                    <option value="akuntansi">Akuntansi</option>
+                </select>
+                
+                <button type="submit">Daftar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UHM</p>
+    </footer>
+</body>
+</html>
