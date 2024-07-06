@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kampus - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="UHM" class="logo">
+        <h1>Hubungi Kami</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="departments.html">Programs</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admission.html">Admission</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>Kontak Kami</h2>
+            <form action="contact-form-handler.php" method="post">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UHM</p>
+    </footer>
+</body>
+</html>
