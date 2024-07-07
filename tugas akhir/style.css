@@ -129,7 +129,7 @@ footer {
     width: 100%;
     bottom: 0;
 }
- /* Mengatur gaya untuk header dan navigasi */
+ 
 header {
     background-color: #003366;
     color: white;
@@ -138,7 +138,7 @@ header {
 }
 
 header .logo {
-    width: 50px; /* Sesuaikan ukuran logo */
+    width: 50px; 
     position: absolute;
     top: 20px;
     left: 20px;
