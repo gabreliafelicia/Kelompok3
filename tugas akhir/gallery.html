@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .gallery-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .gallery-slide img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .gallery-nav button {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,11 +59,41 @@
     <main>
         <section>
             <h2>Galeri Foto dan Video</h2>
-            <p>Foto-foto dan video tentang kampus, kegiatan, dan fasilitas.</p>
+            <p>Foto-foto tentang kampus, kegiatan, dan fasilitas.</p>
+            <div class="gallery-container">
+                <div class="gallery-slide">
+                    <img src="images/Gedung.jpg" alt="Gedung Kampus">
+                    <img src="images/Kegiatan Workshop IT.jpeg" alt="Kegiatan Workshop IT">
+                    <img src="images/Lab.Komputer.jpeg" alt="Lab.Komputer">
+                    <img src="images/Perpustakaan.jpeg" alt="Perpustakaan">
+                </div>
+                <div class="gallery-nav">
+                    <button id="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button id="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 UHM</p>
     </footer>
+    <script>
+        let currentIndex = 0;
+        
+        function moveSlide(direction) {
+            const slides = document.querySelector('.gallery-slide');
+            const totalSlides = slides.querySelectorAll('img').length;
+            
+            currentIndex += direction;
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+            
+            const offset = -currentIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
 </body>
 </html>
