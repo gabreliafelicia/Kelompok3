@@ -3,108 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program Studi</title>
+    <title>Profil Kampus - Admission</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #003366;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-        }
-        .logo {
-            width: 60px;
-            vertical-align: middle;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 40px 20px;
-        }
-        section h2 {
-            text-align: center;
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        section p {
-            text-align: center;
-            color: #666;
-            font-size: 1.2em;
-        }
-        .list {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        .card h3 {
-            color: #003366;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .card ul {
-            list-style: none;
-            padding: 0;
-        }
-        .card ul li {
-            color: #666;
-            margin: 5px 0;
-            font-size: 1em;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #003366;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        footer p {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <header>
         <img src="images/logo.png" alt="UHM" class="logo">
-        <h1>Program Studi</h1>
+        <h1>Pendaftaran</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -118,36 +23,43 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Program Studi Kami</h2>
-            <p>Daftar program studi yang ditawarkan oleh kampus:</p>
-            <div class="list">
-                <div class="card">
-                    <h3>S1 Program Sarjana</h3>
-                    <ul>
-                        <li>Teknik Informatika</li>
-                        <li>Sistem Informasi</li>
-                        <li>Sistem Komputer</li>
-                        <li>Hukum</li>
-                        <li>Administrasi Publik</li>
-                        <li>Kewirausahaan</li>
-                        <li>Pendidikan Teknologi Informasi</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>D3 Program Diploma 3</h3>
-                    <ul>
-                        <li>Manajemen Informatika</li>
-                        <li>Komputerisasi Akuntansi</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>S2 Program Pascasarjana</h3>
-                    <ul>
-                        <li>S2 Sistem Komputer M.Kom.</li>
-                    </ul>
-                </div>
-            </div>
+        <section class="admission-section">
+            <h2>Prosedur Pendaftaran</h2>
+            <p>Ikuti langkah-langkah berikut untuk mendaftar di kampus kami:</p>
+            <ol>
+                <li>Mengisi formulir pendaftaran online.</li>
+                <li>Mengunggah dokumen yang diperlukan.</li>
+                <li>Melakukan pembayaran biaya pendaftaran.</li>
+                <li>Menunggu konfirmasi dari pihak kampus.</li>
+            </ol>
+            <h3>Formulir Pendaftaran</h3>
+            <form action="admission-form-handler.php" method="post">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="dob">Tanggal Lahir:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="program">Program Studi yang Dipilih:</label>
+                <select id="program" name="program" required>
+                    <option value="">-- Pilih Program Studi --</option>
+                    <option value="Teknik Informatika S1">Teknik Informatika S1</option>
+                    <option value="Sistem Informasi S1">Sistem Informasi S1</option>
+                    <option value="Sistem Komputer S1">Sistem Komputer S1</option>
+                    <option value="Hukum S1">Hukum S1</option>
+                    <option value="Administrasi Publik S1">Administrasi Publik S1</option>
+                    <option value="Kewirausahaan S1">Kewirausahaan S1</option>
+                    <option value="Pendidikan Teknologi Informasi S1">Pendidikan Teknologi Informasi S1</option>
+                    <option value="Manajemen Informatika D3">Manajemen Informatika D3</option>
+                    <option value="Komputerisasi Akuntansi D3">Komputerisasi Akuntansi D3</option>
+                    <option value="S2 Sistem Komputer M.Kom.">S2 Sistem Komputer M.Kom.</option>
+                </select>
+                
+                <button type="submit">Daftar</button>
+            </form>
         </section>
     </main>
     <footer>
