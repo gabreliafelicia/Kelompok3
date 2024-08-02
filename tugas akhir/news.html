@@ -5,6 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita dan Acara</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .logo {
+            width: 60px;
+            vertical-align: middle;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        section h2 {
+            text-align: left;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 10px;
+        }
+        .news-list {
+            list-style: none;
+            padding: 0;
+        }
+        .news-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            gap: 20px;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-img {
+            flex-shrink: 0;
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .news-content {
+            flex-grow: 1;
+        }
+        .news-summary {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #003366;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,7 +117,28 @@
     <main>
         <section>
             <h2>Berita dan Acara Terbaru</h2>
-            <p>Daftar berita dan acara terbaru tentang kampus.</p>
+            <ul class="news-list">
+                <li class="news-item">
+                    <img src="C:\Users\ronal\OneDrive\Desktop\Semester 4\Pemrograman Web Tugas\images\17 agustus .jpg" alt="17 Agustus" class="news-img">
+                    <div class="news-content">
+                        <h3 style="font-size: 1.5em; color: #003366;">Perayaan Hari Kemerdekaan Indonesia yang ke-79</h3>
+                        <div class="news-date">17 Agustus 2024</div>
+                        <p class="news-summary">
+                            Dalam rangka memperingati Hari Kemerdekaan Indonesia yang ke-79, kampus UHM mengadakan serangkaian acara mulai dari upacara bendera, lomba-lomba tradisional seperti bulu tangkis, memindahkan tepung, lari balon, tarik tambang, makan kerupuk, karaoke, makan biskuit, voli ball, dan takraw. Acara ini dihadiri oleh seluruh civitas akademika dan masyarakat sekitar dengan penuh semangat dan kreativitas.
+                            Untuk mendukung kelancaran acara 17 Agustus, semua peserta lomba diharapkan untuk melakukan registrasi ulang. Proses ini akan memastikan peserta terdaftar dengan benar dan siap untuk mengikuti acara dengan tertib.
+                            Perlombaan 17 Agustus akan dilaksanakan sesuai dengan timeline yang telah ditentukan. Para peserta diharapkan untuk memeriksa jadwal lomba dengan seksama agar tidak ada yang terlewat. Persiapkan diri Anda dan jangan lewatkan keseruan perlombaan tahun ini!
+                        </p>
+                    </div>
+                </li>
+                <li class="news-item">
+                    <img src="C:\Users\ronal\OneDrive\Desktop\Semester 4\Pemrograman Web Tugas\images\KKN.jpg" alt="New Achievement" class="news-img">
+                    <div class="news-content">
+                        <h3 style="font-size: 1.5em; color: #003366;">Universitas Handayani Makassar Resmi Melepas Mahasiswa KKN di Kabupaten Maros</h3>
+                        <div class="news-date">1 Agustus  2024</div>
+                        <p class="news-summary">Pada 1 Agustus 2024, Universitas Handayani Makassar resmi melepas mahasiswa KKN. Berdasarkan data dari LPPM, sebanyak 124 mahasiswa KKN reguler dan 12 mahasiswa KKN tematik akan ditempatkan di tiga kecamatan: Tanralili, Simbang, dan Bantimurung di Kabupaten Maros.</p>
+                    </div>
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
